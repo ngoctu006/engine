@@ -550,3 +550,30 @@ function twentythirteen_customize_preview_js() {
 	wp_enqueue_script( 'twentythirteen-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20141120', true );
 }
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
+show_admin_bar(false);
+add_action( 'init', 'my_script_enqueuer' );
+function my_script_enqueuer() {
+   wp_register_script( "my_voter_script", get_template_directory_uri().'/js/init.js', array('jquery') );
+   wp_localize_script( 'my_voter_script', 'myAjax', array(
+       'ajaxurl' => admin_url( 'admin-ajax.php' ),
+       'linkCategory' => 'CONSULTANTS'
+    ));        
+   wp_enqueue_script( 'jquery' );
+   wp_enqueue_script( 'my_voter_script' );
+
+}
+add_action("wp_ajax_load_template_page", "load_template_page");
+//add_action("wp_ajax_nopriv_my_user_vote", "my_must_login");
+function load_template_page() {
+
+//   if ( !wp_verify_nonce( $_REQUEST['nonce'], "my_user_vote_nonce")) {
+//      exit("No naughty business please");
+//   }   
+      $title = $_GET['page_title'];
+      $page = get_page_by_title($title);
+      $template = get_field('template',$page->ID);  
+      get_template_part('content',$template);
+
+    die();
+
+}

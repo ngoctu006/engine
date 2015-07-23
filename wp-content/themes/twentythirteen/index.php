@@ -20,7 +20,9 @@ get_header(); ?>
 		<div id="content" class="site-content" role="main">
                     <h1 class="description">L’Atelier de l’Art et du Média</h1>
                     <div class="wrap-logo">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images-css/large-logo.png">
+                        <a class="click-ajax" href="#">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images-css/large-logo.png">
+                        </a>
                     </div>
                     <div class="creatives">
                         <div class="smoke"></div>

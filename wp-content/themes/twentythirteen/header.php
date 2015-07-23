@@ -32,15 +32,5 @@
 
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
-            <?php if(!is_home()): ?>
-                <header id="masthead" class="site-header" role="banner">
-                    <div class="wrap-header">
-                          <a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                             <img src="images-css/logo.png" />
-                          </a>
-                        <?php wp_nav_menu( array('menu' => 'main-menu','menu_class' => 'menu', )); ?>
-                    </div>
-                 </header>
-            <?php endif; ?>
             <div id="main" class="site-main">
                 <div class="container">

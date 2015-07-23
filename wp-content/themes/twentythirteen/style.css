@@ -291,13 +291,17 @@ ul#menu-main-menu li {
   padding: 0 33px;
 }
 ul#menu-main-menu li a {
-  font-family: 'AvantGardeLT-Book';
-  font-size: 19px;
-  color: #abd7d8;
-
+    font-family: 'AvantGardeLT-Book';
+    font-size: 19px;
+    color: #abd7d8;
+    text-decoration: none;
 } 
+ul#menu-main-menu li.active a {
+    color: #fff;
+}
 .bg-body{
     position: relative;
+    height: 927px;
 }
 .top-banner1 {
   position: absolute;
@@ -306,6 +310,7 @@ ul#menu-main-menu li a {
 }
 .top-banner1 img{
   width: 100%;
+  
 }
 .bottom-bg-body{
   margin-top: -5px;
@@ -320,6 +325,7 @@ ul#menu-main-menu li a {
 .heightb{
   position: relative;
     width: 150px;
+    height: 444px;
 }
 .imgb{
     position: absolute; 
@@ -516,4 +522,20 @@ label.title-message {
   position: absolute;
   bottom: 14px;
   right: 23px;
+}
+.link-left{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 39%;
+    left: -9%;
+    z-index: 5;
+}
+.link-right{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 39%;
+    right: -9%;
+    z-index: 5;
 }
