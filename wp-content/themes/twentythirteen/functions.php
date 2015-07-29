@@ -563,15 +563,11 @@ function my_script_enqueuer() {
 
 }
 add_action("wp_ajax_load_template_page", "load_template_page");
-//add_action("wp_ajax_nopriv_my_user_vote", "my_must_login");
+add_action("wp_ajax_nopriv_load_template_page", "load_template_page");
 function load_template_page() {
-
-//   if ( !wp_verify_nonce( $_REQUEST['nonce'], "my_user_vote_nonce")) {
-//      exit("No naughty business please");
-//   }   
       $title = $_GET['page_title'];
       $page = get_page_by_title($title);
-      $template = get_field('template',$page->ID);  
+      $template = get_field('template',$page->ID); 
       get_template_part('content',$template);
 
     die();
