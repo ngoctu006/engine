@@ -1,0 +1,100 @@
+
+.running-man{
+	animation-name:runningman;
+	animation-duration:0.3s;
+	animation-iteration-count: infinite;
+	-webkit-animation-name:runningman;
+	-webkit-animation-duration:0.3s;
+	-webkit-animation-iteration-count: infinite;	
+	width: 455px;
+	height: 430px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+@keyframe runningman{
+	0%{
+		background-image: url("../images/running-man1.png");
+	}
+	50%{
+		background-image: url("../images/running-man2.png");
+	}
+	100%{
+		background-image: url("../images/running-man3.png");	
+	}
+}
+@-webkit-keyframes runningman{
+	0%{
+		background-image: url("../images/running-man1.png");
+	}
+	50%{
+		background-image: url("../images/running-man2.png");
+	}
+	100%{
+		background-image: url("../images/running-man3.png");	
+	}
+}
+.left-to-right{
+	animation-name:left-to-right;
+	animation-duration:5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	-webkit-animation-name:left-to-right;
+	-webkit-animation-duration:5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	position: relative;
+	width: 455px;
+	height: 430px;
+
+}
+@keyframe left-to-right{
+	from{
+		left:-10%;
+	}
+	to{
+		left:105%;
+	}
+}
+@-webkit-keyframes left-to-right{
+	from{
+		left:-10%;
+	}
+	to{
+		left:105%;
+	}
+}
+/*Button*/
+.button.open{
+
+	background-repeat: no-repeat;
+	background-position: center;	
+	width: 474px;
+	height: 472px;
+	-webkit-animation-name:button;
+	-webkit-animation-duration:1s;
+	animation-name:button;
+	animation-duration:1s;
+	background-image: url(../images/button1.png)
+}
+@-webkit-keyframes button{
+	0%{
+		background-image: url(../images/button1.png)
+	}
+	50%{
+		background-image: url(../images/button2.png)
+	}
+	100%{
+		background-image: url(../images/button3.png)
+	}
+}
+keyframes button{
+	0%{
+		background-image: url(../images/button1.png)
+	}
+	50%{
+		background-image: url(../images/button2.png)
+	}
+	100%{
+		background-image: url(../images/button3.png)
+	}
+}

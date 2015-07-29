@@ -108,8 +108,8 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
-(1, 'siteurl', 'http://localhost/engine', 'yes'),
-(2, 'home', 'http://localhost/engine', 'yes'),
+(1, 'siteurl', 'http://localhost/effect/engine', 'yes'),
+(2, 'home', 'http://localhost/effect/engine', 'yes'),
 (3, 'blogname', 'Engine', 'yes'),
 (4, 'blogdescription', 'Un site utilisant WordPress', 'yes'),
 (5, 'users_can_register', '0', 'yes'),
@@ -276,7 +276,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (6, 4, '_menu_item_target', ''),
 (7, 4, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
 (8, 4, '_menu_item_xfn', ''),
-(9, 4, '_menu_item_url', 'http://localhost/engine/'),
+(9, 4, '_menu_item_url', 'http://localhost/effect/engine/'),
 (10, 4, '_menu_item_orphaned', '1437582783'),
 (11, 5, '_menu_item_type', 'post_type'),
 (12, 5, '_menu_item_menu_item_parent', '0'),
@@ -375,17 +375,17 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
 --
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
-(1, 1, '2015-07-19 05:22:13', '2015-07-19 04:22:13', 'Bienvenue dans WordPress. Ceci est votre premier article. Modifiez-le ou supprimez-le, puis lancez-vous&nbsp;!', 'Bonjour tout le monde&nbsp;!', '', 'publish', 'open', 'open', '', 'bonjour-tout-le-monde', '', '', '2015-07-19 05:22:13', '2015-07-19 04:22:13', '', 0, 'http://localhost/engine/?p=1', 0, 'post', '', 1),
-(2, 1, '2015-07-19 05:22:13', '2015-07-19 04:22:13', 'Voici un exemple de page. Elle est différente d''un article de blog, en cela qu''elle restera à la même place, et s''affichera dans le menu de navigation de votre site (en fonction de votre thème). La plupart des gens commencent par écrire une page &laquo;&nbsp;À Propos&nbsp;&raquo; qui les présente aux visiteurs potentiels du site. Vous pourriez y écrire quelque chose de ce tenant&nbsp;:\n\n<blockquote>Bonjour&nbsp;! Je suis un mécanicien qui aspire à devenir un acteur, et ceci est mon blog. J''habite à Bordeaux, j''ai un super chien baptisé Russell, et j''aime la vodka-ananas (ainsi que perdre mon temps à regarder la pluie tomber).</blockquote>\n\n...ou bien quelque chose comme ça&nbsp;:\n\n<blockquote>La société 123 Machin Truc a été créée en 1971, et n''a cessé de proposer au public des machins-trucs de qualité depuis cette année. Située à Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson, 123 Machin Truc emploie 2&nbsp;000 personnes, et fabrique toutes sortes de bidules super pour la communauté bouzemontoise.</blockquote>\n\nEtant donné que vous êtes un nouvel utilisateur de WordPress, vous devriez vous rendre sur votre <a href="http://localhost/engine/wp-admin/">tableau de bord</a> pour effacer la présente page, et créer de nouvelles pages avec votre propre contenu. Amusez-vous bien&nbsp;!', 'Page d&rsquo;exemple', '', 'publish', 'open', 'open', '', 'page-d-exemple', '', '', '2015-07-19 05:22:13', '2015-07-19 04:22:13', '', 0, 'http://localhost/engine/?page_id=2', 0, 'page', '', 0),
-(3, 1, '2015-07-19 05:22:38', '0000-00-00 00:00:00', '', 'Brouillon auto', '', 'auto-draft', 'open', 'open', '', '', '', '', '2015-07-19 05:22:38', '0000-00-00 00:00:00', '', 0, 'http://localhost/engine/?p=3', 0, 'post', '', 0),
-(4, 1, '2015-07-22 17:33:02', '0000-00-00 00:00:00', '', 'Home', '', 'draft', 'open', 'open', '', '', '', '', '2015-07-22 17:33:02', '0000-00-00 00:00:00', '', 0, 'http://localhost/engine/?p=4', 1, 'nav_menu_item', '', 0),
-(5, 1, '2015-07-22 17:33:03', '0000-00-00 00:00:00', '', 'Page d’exemple', '', 'draft', 'open', 'open', '', '', '', '', '2015-07-22 17:33:03', '0000-00-00 00:00:00', '', 0, 'http://localhost/engine/?p=5', 1, 'nav_menu_item', '', 0),
-(6, 1, '2015-07-22 17:37:32', '2015-07-22 16:37:32', '', 'CONSULTANTS', '', 'publish', 'open', 'open', '', 'consultants', '', '', '2015-07-22 17:37:32', '2015-07-22 16:37:32', '', 0, 'http://localhost/engine/?p=6', 1, 'nav_menu_item', '', 0),
-(7, 1, '2015-07-22 17:35:52', '0000-00-00 00:00:00', '', 'Page d’exemple', '', 'draft', 'open', 'open', '', '', '', '', '2015-07-22 17:35:52', '0000-00-00 00:00:00', '', 0, 'http://localhost/engine/?p=7', 1, 'nav_menu_item', '', 0),
-(8, 1, '2015-07-22 17:37:32', '2015-07-22 16:37:32', '', 'MULTIMEDI’ART', '', 'publish', 'open', 'open', '', 'multimediart', '', '', '2015-07-22 17:37:32', '2015-07-22 16:37:32', '', 0, 'http://localhost/engine/?p=8', 2, 'nav_menu_item', '', 0),
-(9, 1, '2015-07-22 17:37:33', '2015-07-22 16:37:33', '', 'ART’FOLIO', '', 'publish', 'open', 'open', '', 'artfolio', '', '', '2015-07-22 17:37:33', '2015-07-22 16:37:33', '', 0, 'http://localhost/engine/?p=9', 3, 'nav_menu_item', '', 0),
-(10, 1, '2015-07-22 17:37:33', '2015-07-22 16:37:33', '', 'SPINAK’ART', '', 'publish', 'open', 'open', '', 'spinakart', '', '', '2015-07-22 17:37:33', '2015-07-22 16:37:33', '', 0, 'http://localhost/engine/?p=10', 4, 'nav_menu_item', '', 0),
-(11, 1, '2015-07-22 17:37:33', '2015-07-22 16:37:33', '', 'CONTACT', '', 'publish', 'open', 'open', '', 'contact', '', '', '2015-07-22 17:37:33', '2015-07-22 16:37:33', '', 0, 'http://localhost/engine/?p=11', 5, 'nav_menu_item', '', 0);
+(1, 1, '2015-07-19 05:22:13', '2015-07-19 04:22:13', 'Bienvenue dans WordPress. Ceci est votre premier article. Modifiez-le ou supprimez-le, puis lancez-vous&nbsp;!', 'Bonjour tout le monde&nbsp;!', '', 'publish', 'open', 'open', '', 'bonjour-tout-le-monde', '', '', '2015-07-19 05:22:13', '2015-07-19 04:22:13', '', 0, 'http://localhost/effect/engine/?p=1', 0, 'post', '', 1),
+(2, 1, '2015-07-19 05:22:13', '2015-07-19 04:22:13', 'Voici un exemple de page. Elle est différente d''un article de blog, en cela qu''elle restera à la même place, et s''affichera dans le menu de navigation de votre site (en fonction de votre thème). La plupart des gens commencent par écrire une page &laquo;&nbsp;À Propos&nbsp;&raquo; qui les présente aux visiteurs potentiels du site. Vous pourriez y écrire quelque chose de ce tenant&nbsp;:\n\n<blockquote>Bonjour&nbsp;! Je suis un mécanicien qui aspire à devenir un acteur, et ceci est mon blog. J''habite à Bordeaux, j''ai un super chien baptisé Russell, et j''aime la vodka-ananas (ainsi que perdre mon temps à regarder la pluie tomber).</blockquote>\n\n...ou bien quelque chose comme ça&nbsp;:\n\n<blockquote>La société 123 Machin Truc a été créée en 1971, et n''a cessé de proposer au public des machins-trucs de qualité depuis cette année. Située à Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson, 123 Machin Truc emploie 2&nbsp;000 personnes, et fabrique toutes sortes de bidules super pour la communauté bouzemontoise.</blockquote>\n\nEtant donné que vous êtes un nouvel utilisateur de WordPress, vous devriez vous rendre sur votre <a href="http://localhost/effect/engine/wp-admin/">tableau de bord</a> pour effacer la présente page, et créer de nouvelles pages avec votre propre contenu. Amusez-vous bien&nbsp;!', 'Page d&rsquo;exemple', '', 'publish', 'open', 'open', '', 'page-d-exemple', '', '', '2015-07-19 05:22:13', '2015-07-19 04:22:13', '', 0, 'http://localhost/effect/engine/?page_id=2', 0, 'page', '', 0),
+(3, 1, '2015-07-19 05:22:38', '0000-00-00 00:00:00', '', 'Brouillon auto', '', 'auto-draft', 'open', 'open', '', '', '', '', '2015-07-19 05:22:38', '0000-00-00 00:00:00', '', 0, 'http://localhost/effect/engine/?p=3', 0, 'post', '', 0),
+(4, 1, '2015-07-22 17:33:02', '0000-00-00 00:00:00', '', 'Home', '', 'draft', 'open', 'open', '', '', '', '', '2015-07-22 17:33:02', '0000-00-00 00:00:00', '', 0, 'http://localhost/effect/engine/?p=4', 1, 'nav_menu_item', '', 0),
+(5, 1, '2015-07-22 17:33:03', '0000-00-00 00:00:00', '', 'Page d’exemple', '', 'draft', 'open', 'open', '', '', '', '', '2015-07-22 17:33:03', '0000-00-00 00:00:00', '', 0, 'http://localhost/effect/engine/?p=5', 1, 'nav_menu_item', '', 0),
+(6, 1, '2015-07-22 17:37:32', '2015-07-22 16:37:32', '', 'CONSULTANTS', '', 'publish', 'open', 'open', '', 'consultants', '', '', '2015-07-22 17:37:32', '2015-07-22 16:37:32', '', 0, 'http://localhost/effect/engine/?p=6', 1, 'nav_menu_item', '', 0),
+(7, 1, '2015-07-22 17:35:52', '0000-00-00 00:00:00', '', 'Page d’exemple', '', 'draft', 'open', 'open', '', '', '', '', '2015-07-22 17:35:52', '0000-00-00 00:00:00', '', 0, 'http://localhost/effect/engine/?p=7', 1, 'nav_menu_item', '', 0),
+(8, 1, '2015-07-22 17:37:32', '2015-07-22 16:37:32', '', 'MULTIMEDI’ART', '', 'publish', 'open', 'open', '', 'multimediart', '', '', '2015-07-22 17:37:32', '2015-07-22 16:37:32', '', 0, 'http://localhost/effect/engine/?p=8', 2, 'nav_menu_item', '', 0),
+(9, 1, '2015-07-22 17:37:33', '2015-07-22 16:37:33', '', 'ART’FOLIO', '', 'publish', 'open', 'open', '', 'artfolio', '', '', '2015-07-22 17:37:33', '2015-07-22 16:37:33', '', 0, 'http://localhost/effect/engine/?p=9', 3, 'nav_menu_item', '', 0),
+(10, 1, '2015-07-22 17:37:33', '2015-07-22 16:37:33', '', 'SPINAK’ART', '', 'publish', 'open', 'open', '', 'spinakart', '', '', '2015-07-22 17:37:33', '2015-07-22 16:37:33', '', 0, 'http://localhost/effect/engine/?p=10', 4, 'nav_menu_item', '', 0),
+(11, 1, '2015-07-22 17:37:33', '2015-07-22 16:37:33', '', 'CONTACT', '', 'publish', 'open', 'open', '', 'contact', '', '', '2015-07-22 17:37:33', '2015-07-22 16:37:33', '', 0, 'http://localhost/effect/engine/?p=11', 5, 'nav_menu_item', '', 0);
 
 -- --------------------------------------------------------
 
