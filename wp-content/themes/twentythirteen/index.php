@@ -18,10 +18,10 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
-                    <h1 class="description">L’Atelier de l’Art et du Média</h1>
+                    <h1 class="description"><?php _e('L’Atelier de l’Art et du Média') ?></h1>
                     <div class="wrap-logo">
                         <a class="click-ajax" href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images-css/large-logo.png">
+                            <div class="button-start-engine logo-home"></div>
                         </a>
                     </div>
                     <div class="creatives">

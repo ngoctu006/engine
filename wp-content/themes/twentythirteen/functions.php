@@ -246,6 +246,24 @@ function twentythirteen_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'Secondary Widget Area', 'twentythirteen' ),
+		'id'            => 'sidebar-2',
+		'description'   => __( 'Appears on posts and pages in the sidebar.', 'twentythirteen' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'footer Widget Area', 'twentythirteen' ),
+		'id'            => 'sidebar-footer',
+		'description'   => __( 'Footer.', 'twentythirteen' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'twentythirteen_widgets_init' );
 
@@ -556,7 +574,8 @@ function my_script_enqueuer() {
    wp_register_script( "my_voter_script", get_template_directory_uri().'/js/init.js', array('jquery') );
    wp_localize_script( 'my_voter_script', 'myAjax', array(
        'ajaxurl' => admin_url( 'admin-ajax.php' ),
-       'linkCategory' => 'CONSULTANTS'
+       'linkCategory' => 'CONSULTANTS',
+       'themeUrl' => get_template_directory_uri()
     ));        
    wp_enqueue_script( 'jquery' );
    wp_enqueue_script( 'my_voter_script' );
@@ -565,11 +584,14 @@ function my_script_enqueuer() {
 add_action("wp_ajax_load_template_page", "load_template_page");
 add_action("wp_ajax_nopriv_load_template_page", "load_template_page");
 function load_template_page() {
-      $title = $_GET['page_title'];
-      $page = get_page_by_title($title);
-      $template = get_field('template',$page->ID); 
-      get_template_part('content',$template);
-
+    $title = $_GET['page_title'];
+    $page = get_page_by_title($title);
+    $template = get_field('template', $page->ID);
+         include( locate_template( 'content-'.$template.'.php' ) );
     die();
-
+}
+add_action("wp_ajax_sent_mail_contact", "sent_mail_contact");
+add_action("wp_ajax_nopriv_sent_mail_contact", "sent_mail_contact");
+function sent_mail_contact() {
+    die('debug');
 }

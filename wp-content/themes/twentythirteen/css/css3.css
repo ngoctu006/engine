@@ -1,0 +1,398 @@
+@keyframes smoke {
+    10%{
+      background-image: url('../images/effect/smoke1.png');
+    }
+    20%{
+      background-image: url('../images/effect/smoke2.png');
+    }
+    30%{
+      background-image: url('../images/effect/smoke3.png');
+    }
+    40%{
+      background-image: url('../images/effect/smoke4.png');
+    }
+    50%{
+      background-image: url('../images/effect/smoke5.png');
+    }
+    60%{
+      background-image: url('../images/effect/smoke6.png');
+    }
+    70%{
+      background-image: url('../images/effect/smoke7.png');
+    }
+    80%{
+      background-image: url('../images/effect/smoke8.png');
+    }
+    90%{
+      background-image: url('../images/effect/smoke8.png');
+    }
+    100%{
+      background-image: url('../images/effect/smoke8.png');
+    }
+}
+@-webkit-keyframes smoke {
+    10%{
+      background-image: url('../images/effect/smoke1.png');
+    }
+    20%{
+      background-image: url('../images/effect/smoke2.png');
+    }
+    30%{
+      background-image: url('../images/effect/smoke3.png');
+    }
+    40%{
+      background-image: url('../images/effect/smoke4.png');
+    }
+    50%{
+      background-image: url('../images/effect/smoke5.png');
+    }
+    60%{
+      background-image: url('../images/effect/smoke6.png');
+    }
+    70%{
+      background-image: url('../images/effect/smoke7.png');
+    }
+    80%{
+      background-image: url('../images/effect/smoke8.png');
+    }
+    90%{
+      background-image: url('../images/effect/smoke8.png');
+    }
+    100%{
+      background-image: url('../images/effect/smoke8.png');
+    }
+
+}
+@-moz-keyframes smoke {
+    10%{
+      background-image: url('../images/effect/smoke1.png');
+    }
+    20%{
+      background-image: url('../images/effect/smoke2.png');
+    }
+    30%{
+      background-image: url('../images/effect/smoke3.png');
+    }
+    40%{
+      background-image: url('../images/effect/smoke4.png');
+    }
+    50%{
+      background-image: url('../images/effect/smoke5.png');
+    }
+    60%{
+      background-image: url('../images/effect/smoke6.png');
+    }
+    70%{
+      background-image: url('../images/effect/smoke7.png');
+    }
+    80%{
+      background-image: url('../images/effect/smoke8.png');
+    }
+    90%{
+      background-image: url('../images/effect/smoke8.png');
+    }
+    100%{
+      background-image: url('../images/effect/smoke8.png');
+    }
+}
+@-o-keyframes smoke {
+    10%{
+      background-image: url('../images/effect/smoke1.png');
+    }
+    20%{
+      background-image: url('../images/effect/smoke2.png');
+    }
+    30%{
+      background-image: url('../images/effect/smoke3.png');
+    }
+    40%{
+      background-image: url('../images/effect/smoke4.png');
+    }
+    50%{
+      background-image: url('../images/effect/smoke5.png');
+    }
+    60%{
+      background-image: url('../images/effect/smoke6.png');
+    }
+    70%{
+      background-image: url('../images/effect/smoke7.png');
+    }
+    80%{
+      background-image: url('../images/effect/smoke8.png');
+    }
+    90%{
+      background-image: url('../images/effect/smoke8.png');
+    }
+    100%{
+      background-image: url('../images/effect/smoke8.png');
+    }
+}
+
+@keyframes fan-large {
+  0%{
+    background-image: url(../images/effect/fan1.png);
+  }
+  50%{
+    background-image: url(../images/effect/fan2.png);
+  }
+  100%{
+    background-image: url(../images/effect/fan3.png);
+  }
+}
+@-webkit-keyframes fan-large {
+  0%{
+    background-image: url(../images/effect/fan1.png);
+  }
+  50%{
+    background-image: url(../images/effect/fan2.png);
+  }
+  100%{
+    background-image: url(../images/effect/fan3.png);
+  }
+}
+@-moz-keyframes fan-large {
+  0%{
+    background-image: url(../images/effect/fan1.png);
+  }
+  50%{
+    background-image: url(../images/effect/fan2.png);
+  }
+  100%{
+    background-image: url(../images/effect/fan3.png);
+  }
+}
+@-o-keyframes fan-large {
+  0%{
+    background-image: url(../images/effect/fan1.png);
+  }
+  50%{
+    background-image: url(../images/effect/fan2.png);
+  }
+  100%{
+    background-image: url(../images/effect/fan3.png);
+  }
+}
+
+@keyframes fan-large {
+  0%{
+    background-image: url(../images/effect/fan1.png);
+  }
+  50%{
+    background-image: url(../images/effect/fan2.png);
+  }
+  100%{
+    background-image: url(../images/effect/fan3.png);
+  }
+}
+/**/
+@-webkit-keyframes fan-small {
+  0%{
+    background-image: url(../images/effect/fan1-sm.png);
+  }
+  50%{
+    background-image: url(../images/effect/fan2-sm.png);
+  }
+  100%{
+    background-image: url(../images/effect/fan3-sm.png);
+  }
+}
+@-moz-keyframes fan-small {
+  0%{
+    background-image: url(../images/effect/fan1-sm.png);
+  }
+  50%{
+    background-image: url(../images/effect/fan2-sm.png);
+  }
+  100%{
+    background-image: url(../images/effect/fan3-sm.png);
+  }
+}
+@-o-keyframes fan-small {
+  0%{
+    background-image: url(../images/effect/fan1-sm.png);
+  }
+  50%{
+    background-image: url(../images/effect/fan2-sm.png);
+  }
+  100%{
+    background-image: url(../images/effect/fan3-sm.png);
+  }
+}
+/***/
+@-webkit-keyframes bird-fly {
+  from{
+    background-image: url('../images/effect/bird1.png');
+  }
+  to{
+    background-image: url('../images/effect/bird2.png');
+  }
+}
+@keyframes bird-fly {
+  from{
+    background-image: url('../images/effect/bird1.png');
+  }
+  to{
+    background-image: url('../images/effect/bird2.png');
+  }
+}
+@-moz-keyframes bird-fly {
+  from{
+    background-image: url('../images/effect/bird1.png');
+  }
+  to{
+    background-image: url('../images/effect/bird2.png');
+  }
+}
+@-o-keyframes bird-fly {
+  from{
+    background-image: url('../images/effect/bird1.png');
+  }
+  to{
+    background-image: url('../images/effect/bird2.png');
+  }
+}
+/**/
+
+@-webkit-keyframes button{
+	0%{
+		background-image: url(../images/effect/button1.png)
+	}
+	50%{
+		background-image: url(../images/effect/button2.png)
+	}
+	100%{
+		background-image: url(../images/effect/button3.png)
+	}
+}
+@keyframes button{
+	0%{
+		background-image: url(../images/effect/button1.png)
+	}
+	50%{
+		background-image: url(../images/effect/button2.png)
+	}
+	100%{
+		background-image: url(../images/effect/button3.png)
+	}
+}
+@-moz-keyframes button{
+	0%{
+		background-image: url(../images/effect/button1.png)
+	}
+	50%{
+		background-image: url(../images/effect/button2.png)
+	}
+	100%{
+		background-image: url(../images/effect/button3.png)
+	}
+}
+@-o-keyframes button{
+	0%{
+		background-image: url(../images/effect/button1.png)
+	}
+	50%{
+		background-image: url(../images/effect/button2.png)
+	}
+	100%{
+		background-image: url(../images/effect/button3.png)
+	}
+}
+@keyframes opacity {
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+@-webkit-keyframes opacity {
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+@-moz-keyframes opacity {
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+@-o-keyframes opacity {
+    0{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+/**/
+@keyframe left-to-right{
+  from{
+    left:-50%;
+  }
+  to{
+    left:150%;
+  }
+}
+@-webkit-keyframes left-to-right{
+  from{
+    left:-50%;
+  }
+  to{
+    left:150%;
+  }
+}
+@-moz-keyframes left-to-right{
+  from{
+    left:-50%;
+  }
+  to{
+    left:150%;
+  }
+}
+@-o-keyframes left-to-right{
+  from{
+    left:-50%;
+  }
+  to{
+    left:150%;
+  }
+}
+/*top to bottom**/
+@keyframes top-to-bottom{
+    from{
+        height: -100%;
+    }
+    to{
+        height: 130%;
+    }
+}
+@-webkit-keyframes top-to-bottom{
+    from{
+        height: 10%;
+    }
+    to{
+        height: 130%;
+    }
+}
+@-moz-keyframes top-to-bottom{
+    from{
+        height: 10%;
+    }
+    to{
+        height: 130%;
+    }
+}
+@-o-keyframes top-to-bottom{
+    from{
+        height: 10%;
+    }
+    to{
+        height: 130%;
+    }
+}
