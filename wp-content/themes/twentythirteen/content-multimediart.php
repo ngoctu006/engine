@@ -159,9 +159,9 @@
             }
             setTimeout(loadimgBird,0);
                 jQuery('.bird-right-left').animate({top:'-100px' ,right: '200%'},10000,function(){})
-
+                
             })
-          
+          jQuery('.ct-marque').marquee();
         })
     </script>
 </div>

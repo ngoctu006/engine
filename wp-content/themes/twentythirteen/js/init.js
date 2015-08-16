@@ -167,7 +167,7 @@ function callAjax() {
                 jQuery('body').append(html)
                 jQuery(".wrap-container.animate").animate({
                     left: 0,
-                }, 4000, function () {
+                }, 2000, function () {
                     jQuery('body').find('div.remove').remove();
                     jQuery('#menu-main-menu li').each(function () {
                         if (jQuery(this).find('a').text() == title) {

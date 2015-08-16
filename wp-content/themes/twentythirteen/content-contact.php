@@ -38,8 +38,8 @@
                             <div class="two-people"></div>
                         </div>
                     </div>
-                    <div class="block-contact  hide-mobile">
-                        <form data-ajax="true" action="#" method="post">
+                    <div class="block-contact  hide-1">
+                        <form id="contact-form-desktop" data-ajax="true" action="#" method="post">
                                 <div class="block-left">
                                     <div class="wrap-input">
                                         <label><?php _e('Nom'); ?></label>
@@ -64,9 +64,28 @@
                                 </div>
                                 <div class="block-right">
                                     <label class="title-message"><?php _e('Message'); ?></label>
-                                    <textarea name="ms" style="margin-top: 0px; margin-bottom: 0px; height: 177px;">  </textarea>
+                                    <textarea name="ms">  </textarea>
                                     <input type="submit" class="submit" value="<?php _e('ENVOYER'); ?>"  />
                                 </div>
+                        </form>
+                    </div>
+                    <div class="hide-desktop contact-form-mobile">
+                        <form id="contact-form-mobile" data-ajax="true" action="#" method="post">
+                            <div class="wrap-input-mobile">
+                                <label></label>
+                                <input class="nom" name="nom" value="" />
+                            </div>
+                            <div class="wrap-input-mobile email-mobile">
+                                <input class="email-mobile" data-type="email"  name="email-mobile" value="" />
+                            </div>
+                            <div class="wrap-input-mobile phone-mobile">
+                                <input class="phone-mobile" name="phone-mobile" value="" />
+                            </div>
+                            <div class="wrap-message-mobile">
+                                <label for="message"><?php _e('MESSAGE'); ?></label>
+                                <textarea></textarea>
+                                <button><?php _e('ENVOYER'); ?></button>
+                            </div>
                         </form>
                     </div>
                     <div class="text-1  hide-mobile"><?php echo get_field('text-contact', $page->ID); ?></div>
@@ -170,7 +189,7 @@
                   jQuery('.imgb').animate({left:0},3000,function(){})
                 }
              })
-            jQuery('form').submit(function(){
+            jQuery('#contact-form-desktop').submit(function(){
                     var validate = true;
                     jQuery('form input').removeClass('error');
                     jQuery('form input').each(function(){
