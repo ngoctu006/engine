@@ -1,12 +1,19 @@
-<div class="wrap-container animate" style="left:100%">
+<div class="wrap-container animate" <?php if($ajax): echo 'style="left:100%"';   endif; ?>>
     <div class="wrap-container-1">
         <header id="masthead" class="site-header" role="banner">
             <div class="wrap-header">
                 <div class="container">
-                    <a class="home-link" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
+                    <a class="home-link hide-mobile" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
                         <img src="<?php echo get_template_directory_uri() ?>/images-css/logo.png" />
                     </a>
                     <?php wp_nav_menu(array('menu' => 'main-menu', 'menu_class' => 'menu',)); ?>
+                    <div class="hide-mobile">
+                    <?php 
+                        if(is_active_sidebar( 'sidebar-header')){
+                            dynamic_sidebar( 'sidebar-header' );
+                        }
+                    ?>
+                    </div>
                 </div>
             </div>
         </header>
@@ -31,7 +38,7 @@
                             <div class="two-people"></div>
                         </div>
                     </div>
-                    <div class="block-contact">
+                    <div class="block-contact  hide-mobile">
                         <form data-ajax="true" action="#" method="post">
                                 <div class="block-left">
                                     <div class="wrap-input">
@@ -62,8 +69,8 @@
                                 </div>
                         </form>
                     </div>
-                    <div class="text-1">START ENGINE ( S.A.) 75018 Paris France  SIRET:51222321025 numéro de déclaration d'activité:71300887553 – 01.42.36.65.99 –  www.startengine.partner – contact@startengine.fr</div>
-                    <div class="block-social desktop">
+                    <div class="text-1  hide-mobile"><?php echo get_field('text-contact', $page->ID); ?></div>
+                    <div class="block-social desktop  hide-mobile">
                         <a href="#" target="_blank" class="fb"><img src="<?php echo get_template_directory_uri() ?>/images-css/facebook.png" /></a>
                         <a href="#" target="_blank" class="linked"><img src="<?php echo get_template_directory_uri() ?>/images-css/linked.png" /></a>
                     </div>
@@ -77,6 +84,19 @@
                     </div>
                 </div>
             </div>
+            <footer class="hide-desktop">
+                <div class="wrap-social-mobile">
+                    <a href="#" class="fb" target="_blank">
+                        <img src="<?php echo get_template_directory_uri() ?>/images/fb-mobile.png" />
+                    </a>
+                    <a href="#" class="in" target="_blank">
+                        <img src="<?php echo get_template_directory_uri() ?>/images/in-mobile.png" />
+                    </a>
+                </div>
+                <div class="copy-right">
+                    <?php get_sidebar('footer') ?>
+                </div>
+            </footer>
         </div>   
     </div>
     <script>

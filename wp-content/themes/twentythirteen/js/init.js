@@ -5,6 +5,7 @@
  */
 jQuery(window).load(function ($) {
     reponsiveHeight();
+    callAjax();
 })
 jQuery(window).resize(function () {
     // console.log('debug')
@@ -64,6 +65,8 @@ jQuery(document).ready(function () {
                                                 jQuery('body').find('div.remove').remove();
                                                 jQuery('#menu-main-menu li:first-child').addClass('active');
                                                 callAjax();
+                                                history.pushState('data', '', jQuery('#menu-main-menu li:first-child a').attr('href'));
+                                                editUrlMultilang();
                                                 reponsiveHeight();
                                             });
                                         }
@@ -131,7 +134,8 @@ function reponsiveHeight(){
         var heightbottom = jQuery('.bottom-bg-body').height();
         var heightTop = jQuery('.top-bg-body').height();
         var windowHeight = jQuery(window).height();
-        jQuery('.wrap-container-1').css({'height': windowHeight})
+        jQuery('.wrap-container-1').css({'height': heightTop + heightbottom + 255})
+        jQuery('.home .wrap-container-1').css({'height': windowHeight})
 //        jQuery('.tri-angle').css({'height': 0})
         jQuery('.border-left').css({'height': heightTop})
         jQuery('.border-right').css({'height': heightTop})
@@ -143,7 +147,7 @@ function reponsiveHeight(){
 }
 function callAjax() {
     jQuery(".link-right").live("click", function () {
-        var title = '';
+        var title = '';    
         if (jQuery(this).hasClass('disable')) {
             return;
         }
@@ -160,7 +164,6 @@ function callAjax() {
             url: myAjax.ajaxurl,
             data: {action: "load_template_page", page_title: title},
             success: function (html) {
-
                 jQuery('body').append(html)
                 jQuery(".wrap-container.animate").animate({
                     left: 0,
@@ -170,6 +173,8 @@ function callAjax() {
                         if (jQuery(this).find('a').text() == title) {
                             jQuery(this).addClass('active');
                         }
+                        history.pushState('data', '', jQuery(this).find('a').attr('href'));
+                        editUrlMultilang();
                     })
                     
                 });
@@ -187,8 +192,10 @@ function callAjax() {
         jQuery('.wrap-container').addClass('remove');
         if (!jQuery('#menu-main-menu li.active').prev().length) {
             title = jQuery('.wrap-container.remove #menu-main-menu li:last-child').find('a').text();
+            href = jQuery('.wrap-container.remove #menu-main-menu li:last-child').find('a').attr('href');
         } else {
             title = jQuery('.wrap-container.remove li.active').prev().find('a').text();
+            href = jQuery('.wrap-container.remove li.active').prev().find('a').attr('href');
         }
         jQuery('#menu-main-menu li').removeClass('active')
         jQuery.ajax({
@@ -205,6 +212,8 @@ function callAjax() {
                         if (jQuery(this).find('a').text() == title) {
                             jQuery(this).addClass('active');
                         }
+                        history.pushState('data', '', href);
+                        editUrlMultilang()
                     })
                 });
                 jQuery('.link-right', '.link-left').removeClass('disable');
@@ -222,6 +231,7 @@ function callAjax() {
         jQuery('ul#menu-main-menu li').addClass('disable')
         jQuery('link-left', 'link-right').addClass('disable');
         var title = jQuery(this).text();
+        var href = jQuery(this).attr('href');
         jQuery('#menu-main-menu li').removeClass('active')
         jQuery.ajax({
             type: "Get",
@@ -236,16 +246,29 @@ function callAjax() {
                     jQuery('#menu-main-menu li').each(function () {
                         if (jQuery(this).find('a').text() == title) {
                             jQuery(this).addClass('active');
+                             
                         }
                     })
                     jQuery('.link-right', '.link-left').removeClass('disable');
                     jQuery('ul#menu-main-menu li').removeClass('disable')
-                     
+                    history.pushState('data', '', href);
+                    editUrlMultilang(href)
+//                    jQuery('.ct-marque').marquee();
+//                    jQuery('.ct-marque *').css('opacity',1);
                 });
                 reponsiveHeight();
                
             }
         })
     });
-
+}
+function editUrlMultilang(url){
+    var pathname = myAjax.home_url;
+    var arrayPathName = url.split('/');
+    var arrayPathName = url.split('/');
+    jQuery('.qtranxs_language_chooser li a').each(function(){
+        var lang = jQuery(this).attr('hreflang');
+        var pullpath = pathname+'/'+lang+'/'+arrayPathName[arrayPathName.length-2];
+        jQuery(this).attr('href',pullpath);
+    })
 }

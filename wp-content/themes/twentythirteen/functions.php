@@ -264,6 +264,15 @@ function twentythirteen_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'Header top', 'twentythirteen' ),
+		'id'            => 'sidebar-header',
+		'description'   => __( 'header', 'twentythirteen' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'twentythirteen_widgets_init' );
 
@@ -574,6 +583,7 @@ function my_script_enqueuer() {
    wp_register_script( "my_voter_script", get_template_directory_uri().'/js/init.js', array('jquery') );
    wp_localize_script( 'my_voter_script', 'myAjax', array(
        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+       'home_url' => home_url(),
        'linkCategory' => 'CONSULTANTS',
        'themeUrl' => get_template_directory_uri()
     ));        
@@ -587,6 +597,7 @@ function load_template_page() {
     $title = $_GET['page_title'];
     $page = get_page_by_title($title);
     $template = get_field('template', $page->ID);
+    $ajax = true;
          include( locate_template( 'content-'.$template.'.php' ) );
     die();
 }

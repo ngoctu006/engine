@@ -1,4 +1,4 @@
-<div class="wrap-container animate" style="left:100%">
+<div class="wrap-container animate" <?php if($ajax): echo 'style="left:100%"';   endif; ?>>
     <div class="wrap-container-1">
         <header id="masthead" class="site-header" role="banner">
             <div class="wrap-header">
@@ -7,6 +7,13 @@
                         <img src="<?php echo get_template_directory_uri() ?>/images-css/logo.png" />
                     </a>
                     <?php wp_nav_menu(array('menu' => 'main-menu', 'menu_class' => 'menu',)); ?>
+                    <div class="hide-mobile">
+                        <?php 
+                            if(is_active_sidebar( 'sidebar-header')){
+                                dynamic_sidebar( 'sidebar-header' );
+                            }
+                        ?>
+                    </div>
                 </div>
             </div>
         </header>
@@ -76,7 +83,7 @@
                 }
                 wp_reset_postdata();
             ?>
-                                   <footer class="hide-desktop">
+                    <footer class="hide-desktop">
                         <div class="wrap-social-mobile">
                             <a href="#" class="fb" target="_blank">
                                 <img src="<?php echo get_template_directory_uri() ?>/images/fb-mobile.png" />
@@ -90,7 +97,7 @@
                         </div>
                     </footer>
         </div>
-    </div>
+</div>
     <script>
         jQuery(document).ready(function () {
             jQuery('.block-content').hover(function () {

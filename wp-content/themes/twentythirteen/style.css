@@ -223,6 +223,17 @@ div#main {
   display: table;
   max-width: 1200px;
 }
+header#masthead {
+    position: relative;
+}
+aside#qtranslate-2 {
+    position: absolute;
+    top: 65px;
+    right: -60px;
+}
+aside#qtranslate-2 li {
+    margin-right: 10px;
+}
 ul#menu-main-menu {
   float: left;
   padding-left: 0;
@@ -237,15 +248,17 @@ ul#menu-main-menu li:last-child {
 ul#menu-main-menu li {
   float: left;
   list-style: none;
-  padding: 0 33px;
+  padding:0 25px;
 }
-ul#menu-main-menu li a {
+ul#menu-main-menu li a
+{
     font-family: 'AvantGardeLT-Book';
     font-size: 19px;
     color: #abd7d8;
     text-decoration: none;
 } 
-ul#menu-main-menu li.active a {
+ul#menu-main-menu li.active a,
+ul#menu-main-menu li.current_page_item a{
     color: #fff;
 }
 .bg-body{
@@ -1132,5 +1145,8 @@ div#the_content_26 .wrap-content {
     display:none
 }
 .artfolio .bottom-bg-body {
-    margin-top: 13px;
+       margin-top: -5px;
 }
+/*.ct-marque *{
+    opacity: 0;
+}*/

@@ -34,7 +34,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <div class="wrap-container">
+    <div class="wrap-container <?php if(is_home()) echo 'home' ?>">
         <div class="wrap-container-1">
 	<div id="page" class="hfeed site">
             <div id="main" class="site-main">
